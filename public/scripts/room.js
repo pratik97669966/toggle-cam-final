@@ -25,7 +25,7 @@ function createPeer(userIdToCall) {
     const peer = new RTCPeerConnection({
         iceServers: [
             {
-                urls: "stun:stun.stunprotocol.org"
+                urls: "https://toggle-cam-final.herokuapp.com/"
             }
         ]
     });

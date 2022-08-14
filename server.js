@@ -4,7 +4,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 app.use(express.static('public'));
 
-const server = http.server(app);
+const server = http.createServer(app);
 const io = new Server(server);
 
 app.get('/room/:roomId', (req, res) => {
@@ -60,4 +60,4 @@ io.on('connection', socket => {
 
 });
 
-server.listen(3000, () => console.log('server is running on port 1337'));
+server.listen(1337, () => console.log('server is running on port 1337'));
